@@ -1,2 +1,2 @@
-# mephyDash
-A Limbus Company Resource Website
+# MephyDash
+# A Limbus Company Resource Website
