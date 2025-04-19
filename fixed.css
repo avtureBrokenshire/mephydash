@@ -6,7 +6,6 @@ html, body {
 }
 
 body {
-    display: flex;
     flex-direction: column;
     color: white;
     background-color: #2a2a2a;
