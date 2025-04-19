@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mephy</title>
+    <link rel="stylesheet" href="/fixed.css">
+    <link rel="stylesheet" href="/idlibrary.css">
+    <script src="/idlibrary.js"></script> 
+</head>
+<body>
+    <header>
+        <a id="homeAnchor" href="index.html">Home</a>
+        <input class="searchbar" type="text" placeholder="Search..">
+        <p></p>
+    </header>
+
+    <div class="main">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a class="active" href="idlibrary.html">Identities</a>
+            <a href="#egolibrary">E.G.Os</a>
+            <a href="#tierlist">Tier List</a>
+            <a href="#guides">Interactive Guides</a>
+            <a href="#calc">Combat Calculator</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Tag Search Bar -->
+            <div class="tagbar">
+                <input class="searchbar" type="text" placeholder="Search tags/identities...">
+                <div class="tag-space">
+                    <div onclick="showMainStatus()" class="tag-category">
+                        Main Status Effects
+                    </div>
+                    
+                    <div id="mainstatuses" class="tag-grid">
+                        <div id="burn" class="tag">
+                            Burn
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Dark Flame
+                                </div>
+                                <div class="subtag">
+                                    Searing Birdcage
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="bleed" class="tag">
+                            Bleed
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Red Plum Blossom
+                                </div>
+                                <div class="subtag">
+                                    Polydiapsic Rose
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tremor" class="tag">
+                            Tremor
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Tremor - Chain
+                                </div>
+                                <div class="subtag">
+                                    Tremor - Decay
+                                </div>
+                                <div class="subtag">
+                                    Tremor - Reverb
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="rupture" class="tag">
+                            Rupture
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Deathrite [Haste]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sinking" class="tag">
+                            Sinking
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Sinking Deluge
+                                </div>
+                                <div class="subtag">
+                                    Echoes of The Manor
+                                </div>
+                                <div class="subtag">
+                                    Impending Ruin
+                                </div>
+                                <div class="subtag">
+                                    Butterfly
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="poise" class="tag">
+                            Poise
+                        </div>
+
+                        <div id="charge" class="tag">
+                            Charge
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Load
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div onclick="showDebuffs()" class="tag-category">
+                        Debuffs
+                    </div>
+
+                    <div id="debuffs" class="tag-grid">
+                        <div id="fragile" class="tag">
+                            Fragile
+                            <div class="subtag-grid">
+                                <div class="subtag">
+                                    Slash Fragility
+                                </div>
+                                <div class="subtag">
+                                    Piece Fragility
+                                </div>
+                                <div class="subtag">
+                                    Blunt Fragility
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="identity-grid">
+                <div class="identity-card">
+                    <img class="identity-image" src="./images/lcbishmael.png" alt="Ishmael">
+                    <div class="identity-info">
+                        <div class="identity-name">[LCB Sinner] Ishmael</div>
+                        <div class="identity-meta">
+                            <span class="identity-rarity rarity-0">0</span>
+                            <span class="identity-tag">Tremor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="identity-card">
+                    <img class="identity-image" src="./images/bloutis.png" alt="Outis">
+                    <div class="identity-info">
+                        <div class="identity-name">[Blade Lineage Salsu] Outis</div>
+                        <div class="identity-meta">
+                            <span class="identity-rarity rarity-00">00</span>
+                            <span class="identity-tag">Poise</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="identity-card">
+                    <img class="identity-image" src="./images/blmeursault.png" alt="Meursault">
+                    <div class="identity-info">
+                        <div class="identity-name">[Blade Lineage Mentor] Meursault</div>
+                        <div class="identity-meta">
+                            <span class="identity-rarity rarity-000">000</span>
+                            <span class="identity-tag">Poise</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="identity-card">
+                    <img class="identity-image" src="./images/managerdon.png" alt="Don Quixote">
+                    <div class="identity-info">
+                        <div class="identity-name">[The Manager of La Manchaland] Don Quixote</div>
+                        <div class="identity-meta">
+                            <span class="identity-rarity rarity-000">000</span>
+                            <span class="identity-tag">Bleed</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="identity-card">
+                    <img class="identity-image" src="./images/slyisang.png" alt="Yi Sang">
+                    <div class="identity-info">
+                        <div class="identity-name">[Lobotomy EGO::Solemn Lament] Yi Sang</div>
+                        <div class="identity-meta">
+                            <span class="identity-rarity rarity-000">000</span>
+                            <span class="identity-tag">Sinking</span>
+                            <span class="identity-tag">Butterfly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="identity-card">
+                    <img class="identity-image" src="./images/rabbitheathcliff.png" alt="Heathcliff">
+                    <div class="identity-info">
+                        <div class="identity-name">[R Corp 4th Pack Rabbit] Heathcliff</div>
+                        <div class="identity-meta">
+                            <span class="identity-rarity rarity-000">000</span>
+                            <span class="identity-tag">Fragile</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

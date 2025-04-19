@@ -1,0 +1,256 @@
+.tagbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.tagbar .searchbar {
+    width: 450px;
+    align-self: center;
+}
+
+.tag-space {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.tag-category {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 10px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.tag-category:hover {
+    background-color: #6c6c6c;
+    color: white;
+}
+
+.tag-grid {
+    font-weight: bold;
+    position: relative;
+    background-color: #111111;
+    display: none;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    margin: -5px 0 0 0;
+}
+
+.tag {
+    position: relative;
+    cursor: pointer;
+}
+
+.tag:hover > .subtag-grid {
+    display: flex;
+}
+
+#burn {
+    background-color: #a13232;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#burn:hover {
+    border-radius: 5px;
+}
+
+#bleed {
+    background-color: #b86125;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#bleed:hover {
+    border-radius: 5px;
+}
+
+#tremor {
+    background-color: #9f8c3a;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#tremor:hover {
+    border-radius: 5px;
+}
+
+#rupture {
+    background-color: #4d7a40;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#rupture:hover {
+    border-radius: 5px;
+}
+
+#sinking {
+    background-color: #39858a;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#sinking:hover {
+    border-radius: 5px;
+}
+
+#poise {
+    background-color: #384d8a;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#poise:hover {
+    border-radius: 5px;
+}
+
+#charge {
+    background-color: #5e4285;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+#charge:hover {
+    border-radius: 5px;
+}
+
+#fragile {
+    background-color: #40216b;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+.subtag-grid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: inherit; /* Take parent's background color */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    min-width: 180px; /* Ensure it's wide enough for text */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.subtag {
+    padding: 8px 10px;
+    font-weight: normal;
+    transition: background-color 0.2s;
+}
+
+.subtag:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Make sure the hover state works correctly */
+.tag:hover > .subtag-grid {
+    display: flex;
+}
+
+.identity-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.identity-card {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(20% - 15px);
+    aspect-ratio: 16/9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.identity-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.identity-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 12px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.identity-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.identity-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: clip;
+}
+
+.identity-rarity {
+    font-weight: bold;
+}
+
+.rarity-0 { color: #cccccc; }
+.rarity-00 { color: #c70404; }
+.rarity-000 { color: #ffdd00; }
+
+.identity-tag {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.show {
+    display: flex;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+    .identity-card {
+        width: calc(25% - 15px);
+    }
+
+    .identity-name {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .identity-card {
+        width: calc(33.3333% - 15px);
+    }
+
+    .identity-name {
+        font-size: 12px;
+    }
+
+    .identity-tag {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .identity-card {
+        width: calc(33.3333% - 10px);
+    }
+}
